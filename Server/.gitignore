@@ -1,0 +1,4 @@
+﻿.idea
+*.*bak*
+appsettings.json
+appsettings.*.json
