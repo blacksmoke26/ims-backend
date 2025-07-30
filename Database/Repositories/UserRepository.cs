@@ -2,8 +2,6 @@
 // Copyright (c) 2025 Junaid Atari, and contributors
 // Repository: https://github.com/blacksmoke26/ims-backend
 
-using Database.Core.Base;
-
 namespace Database.Repositories;
 
 public sealed class UserRepository(ApplicationDbContext context) : RepositoryBase<User>(context) {
