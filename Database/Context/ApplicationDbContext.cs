@@ -4,7 +4,6 @@
 
 using System.Globalization;
 using Database.Context.EntityConfigurations;
-using Database.Core.Base;
 using Database.Seeders;
 
 namespace Database.Context;
@@ -61,7 +60,26 @@ public partial class ApplicationDbContext : DbContext {
   }
 
   protected override void OnModelCreating(ModelBuilder builder) {
+    builder.ApplyConfiguration(new BrandEntityTypeConfiguration());
+    builder.ApplyConfiguration(new CustomerEntityTypeConfiguration());
+    builder.ApplyConfiguration(new PasswordResetTokenEntityTypeConfiguration());
+    builder.ApplyConfiguration(new ProductCategoryEntityTypeConfiguration());
+    builder.ApplyConfiguration(new ProductEntityTypeConfiguration());
+    builder.ApplyConfiguration(new ProductImageEntityTypeConfiguration());
+    builder.ApplyConfiguration(new PurchaseEntityTypeConfiguration());
+    builder.ApplyConfiguration(new PurchaseItemEntityTypeConfiguration());
+    builder.ApplyConfiguration(new ReturnPurchaseEntityTypeConfiguration());
+    builder.ApplyConfiguration(new ReturnPurchaseItemEntityTypeConfiguration());
+    builder.ApplyConfiguration(new SaleEntityTypeConfiguration());
+    builder.ApplyConfiguration(new SaleItemEntityTypeConfiguration());
+    builder.ApplyConfiguration(new SaleReturnEntityTypeConfiguration());
+    builder.ApplyConfiguration(new SaleReturnItemEntityTypeConfiguration());
+    builder.ApplyConfiguration(new SessionEntityTypeConfiguration());
+    builder.ApplyConfiguration(new SupplierEntityTypeConfiguration());
+    builder.ApplyConfiguration(new TransferEntityTypeConfiguration());
+    builder.ApplyConfiguration(new TransferItemEntityTypeConfiguration());
     builder.ApplyConfiguration(new UserEntityTypeConfiguration());
+    builder.ApplyConfiguration(new WarehouseEntityTypeConfiguration());
     OnModelCreatingPartial(builder);
   }
 

@@ -8,7 +8,6 @@ using Database.Context;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Application;
 
 namespace Application;
 
