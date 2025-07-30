@@ -12,6 +12,7 @@ global using System.Text.Json.Serialization;
 global using Abstraction.Constants;
 global using Database.Helpers;
 global using Database.Context;
+global using Database.Core.Base;
 global using Database.Entities;
 global using Humanizer;
 global using Microsoft.EntityFrameworkCore;
