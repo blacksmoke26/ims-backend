@@ -2,7 +2,7 @@
 // Copyright (c) 2025 Junaid Atari, and contributors
 // Repository: https://github.com/blacksmoke26/ims-backend
 
-namespace Application.Core.Base;
+namespace Database.Repositories;
 
-public abstract class ServiceBase {
+public sealed class SupplierRepository(ApplicationDbContext context) : RepositoryBase<Supplier>(context) {
 }
