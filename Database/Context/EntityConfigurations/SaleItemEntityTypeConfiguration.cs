@@ -26,10 +26,5 @@ internal sealed class SaleItemEntityTypeConfiguration : IEntityTypeConfiguration
     entity.Property(e => e.Stock).HasComment("Stock");
     entity.Property(e => e.Subtotal).HasComment("Subtotal");
     entity.Property(e => e.UpdatedAt).HasComment("Updated");
-
-    entity.HasOne(d => d.IdNavigation).WithOne(p => p.SaleItem)
-      .HasConstraintName("FK_sale_items_products_product_id");
-
-    entity.HasOne(d => d.Id1).WithOne(p => p.SaleItem).HasConstraintName("FK_sale_items_sales_sale_id");
   }
 }
