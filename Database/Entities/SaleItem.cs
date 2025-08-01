@@ -46,12 +46,6 @@ public partial class SaleItem : EntityBase {
   [Column("updated_at", TypeName = "timestamp without time zone")]
   public DateTime? UpdatedAt { get; set; }
 
-  [ForeignKey("Id")] [InverseProperty("SaleItem")]
-  public virtual Sale Id1 { get; set; } = null!;
-
-  [ForeignKey("Id")] [InverseProperty("SaleItem")]
-  public virtual Product IdNavigation { get; set; } = null!;
-
   /// <inheritdoc/>
   public override Task OnTrackChangesAsync(EntityState state, CancellationToken token = default) {
     if (state is EntityState.Added) {

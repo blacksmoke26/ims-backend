@@ -123,9 +123,6 @@ public partial class Product: EntityBase {
   [InverseProperty("Product")]
   public virtual ICollection<ReturnPurchaseItem> ReturnPurchaseItems { get; set; } = new List<ReturnPurchaseItem>();
 
-  [InverseProperty("IdNavigation")]
-  public virtual SaleItem? SaleItem { get; set; }
-
   [InverseProperty("Product")]
   public virtual ICollection<SaleReturnItem> SaleReturnItems { get; set; } = new List<SaleReturnItem>();
 

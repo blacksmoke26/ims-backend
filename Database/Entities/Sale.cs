@@ -65,9 +65,6 @@ public partial class Sale : EntityBase {
   [ForeignKey("CustomerId")] [InverseProperty("Sales")]
   public virtual Customer Customer { get; set; } = null!;
 
-  [InverseProperty("Id1")]
-  public virtual SaleItem? SaleItem { get; set; }
-
   [ForeignKey("WarehouseId")] [InverseProperty("Sales")]
   public virtual Warehouse Warehouse { get; set; } = null!;
 
