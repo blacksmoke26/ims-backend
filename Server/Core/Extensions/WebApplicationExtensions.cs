@@ -21,7 +21,7 @@ public static class WebApplicationExtensions {
     OpenApiConfigurator.Use(app);
     ScalarClientConfigurator.Use(app);
 
-    //CorsConfigurator.Use(app);
+    CorsConfigurator.Use(app);
 
     app.UseForwardedHeaders(new ForwardedHeadersOptions {
       ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
